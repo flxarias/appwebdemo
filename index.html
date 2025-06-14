@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi lista de la compra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mi lista de la compra</h1>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <form id="product-form">
+                <input type="text" id="name" placeholder="Producto" required>
+                <input type="text" id="quantity" placeholder="Cantidad" required>
+                <select id="category">
+                    <option value="">Categoría (opcional)</option>
+                    <option value="Frutas">Frutas</option>
+                    <option value="Lácteos">Lácteos</option>
+                    <option value="Bebidas">Bebidas</option>
+                    <option value="Carnes">Carnes</option>
+                    <option value="Otros">Otros</option>
+                </select>
+                <button type="submit">Añadir</button>
+            </form>
+        </section>
+
+        <section class="controls">
+            <button id="clear-list">Vaciar lista</button>
+            <button id="export-list">Exportar lista</button>
+        </section>
+
+        <section class="stats">
+            <h2>Estadísticas</h2>
+            <p>Total de productos: <span id="total-count">0</span></p>
+            <p>Comprados: <span id="bought-count">0</span></p>
+        </section>
+
+        <section class="list-section">
+            <table id="product-table">
+                <thead>
+                    <tr>
+                        <th>Comprado</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Categoría</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="product-list">
+                    <!-- Productos aquí -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Utiliza el formulario para añadir productos a tu lista.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
